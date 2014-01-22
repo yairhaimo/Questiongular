@@ -58,6 +58,13 @@
 }
 
 
+.editor {
+  min-height: 300px;
+  min-width: 90%;
+  border: 1px #297CCF solid;
+  outline: 1px #58A1EB solid;
+}
+
 /************/
 
 div[ui-view]{

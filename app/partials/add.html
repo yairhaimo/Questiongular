@@ -9,7 +9,8 @@
 	<div class="panel panel-default">
 		<div class="panel-body" >
 			<p class="lead">{{topic.subtitle}}</p>
-			<pre editable-textarea="topic.content" ng-bind-html="topic.content" e-rows="20" e-cols="160">{{topic.content}}</pre>
+			<!-- <pre editable-textarea="topic.content" ng-bind-html="topic.content" e-rows="20" e-cols="160">{{topic.content}}</pre> -->
+			<div class="editor" hallo-editor ng-model="topic.content"></div>
 		</div>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
