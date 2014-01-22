@@ -6,7 +6,7 @@
 		function($stateProvider, $urlRouterProvider, $locationProvider) {
 			$urlRouterProvider.otherwise('/');
 			$locationProvider.html5Mode(true);
-			
+
 			$stateProvider
 				.state('root', {
 					abstract: true,
@@ -158,11 +158,6 @@
 			restrict: 'A',
 			require: '?ngModel',
 			link: function(scope, element, attrs, ngModel) {
-				// if (!ngModel) {
-				// 	return;
-				// }
-				console.log('beep');
-
 				element.hallo({
 					plugins: {
 						'halloformat': {
