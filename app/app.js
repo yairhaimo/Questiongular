@@ -104,14 +104,6 @@
 				addedby: username || 'N/A'
 			};
 
-			$scope.tinymceoptions = {
-				toolbar: "undo redo | styleselect | bold italic | link image | table | textcolor | spellchecker",
-				menu: {},
-				theme: "modern",
-				skin: 'light'
-			};
-
-
 			$scope.addLink = function() {
 				var icon = figureIcon();
 				$scope.topic.links.push({
@@ -138,6 +130,9 @@
 					_icon = "http://www.chromein.com/public/crx/ighdmehidhipcmcojjgiloacoafjmpfk/icon.png";
 				} else if ($scope.addedlink.href.indexOf('plnkr.co') > -1) {
 					_icon = "http://plnkr.co/img/plunker.png";
+				}
+				else if ($scope.addedlink.href.indexOf('github.com') > -1) {
+					_icon = "https://addons.opera.com/media/extensions/55/21055/1.0.6-rev2/icons/icon_64x64.png";
 				}
 
 				return _icon;
