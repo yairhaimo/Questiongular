@@ -1,3 +1,8 @@
+/////////////////////////////////////////////////////////////
+/// Much refactoring is needed. Dont mind this ugly code :/
+////////////////////////////////////////////////////////////
+
+
 (function() {
 	var app = angular.module('questiongular', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'firebase', 'ngSanitize', 'xeditable']);
 
