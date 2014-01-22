@@ -49,7 +49,7 @@
 		}]);
 
 
-	app.constant('appurl', 'https://angularfaq.firebaseio.com')
+	app.constant('appurl', 'https://questiongular.firebaseio.com')
 
 	app.run(['$rootScope', '$window', 'editableOptions', '$state',
 		function($rootScope, $window, editableOptions, $state) {
