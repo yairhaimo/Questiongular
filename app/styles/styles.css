@@ -39,7 +39,11 @@
 }
 
 .panel {
-	padding-bottom: 15px;
+	/**padding-bottom: 15px;**/
+}
+
+.add-link-row {
+  margin-bottom: 15px;
 }
 
 .header-row {

@@ -8,11 +8,10 @@
 
 	<div class="panel panel-default">
 		<div class="panel-body" >
-			<p class="lead">{{topic.subtitle}}</p>
 			<!-- <pre editable-textarea="topic.content" ng-bind-html="topic.content" e-rows="20" e-cols="160">{{topic.content}}</pre> -->
 			<div class="editor" hallo-editor ng-model="topic.content"></div>
 		</div>
-		<div class="row">
+		<div class="row add-link-row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="input-group search-bar">
 					<input type="text" ng-model="addedlink.href" class="form-control input-lg">
@@ -32,4 +31,8 @@
 		</ul>
 	</div>
 </div>
-<button class="btn btn-primary" ng-click="saveTopic()">Save</button>
+<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+		<button class="btn btn-primary btn-block" ng-click="saveTopic()">Save</button>	
+	</div>
+</div>

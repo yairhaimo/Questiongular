@@ -2,10 +2,9 @@
 	var app = angular.module('questiongular', ['ui.router', 'ngAnimate', 'ui.bootstrap', 'firebase', 'ngSanitize', 'xeditable']);
 
 
-	app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
-		function($stateProvider, $urlRouterProvider, $locationProvider) {
+	app.config(['$stateProvider', '$urlRouterProvider',
+		function($stateProvider, $urlRouterProvider) {
 			$urlRouterProvider.otherwise('/');
-			$locationProvider.html5Mode(true);
 
 			$stateProvider
 				.state('root', {
