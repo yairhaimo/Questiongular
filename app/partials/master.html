@@ -1,0 +1,22 @@
+<div class="row header-row">
+	<div class="col-md-2">
+		<span class="back-link">
+			<a ui-sref="root.search" ng-show="!$state.is('root.search')"><i class="fa fa-arrow-circle-o-left fa-3x"></i></a>
+		</span>
+	</div>
+	<div class="col-md-2 col-md-offset-6">
+		<span class="pull-right" ng-hide="$state.is('root.add')" ng-show="auth.user">
+			<a ui-sref="root.add"> <i class="fa fa-plus-circle"></i> Add a topic</a>
+		</span>
+	</div>
+	<div class="col-md-2">
+		<span class="pull-right">
+			 <a href="" ng-hide="auth.user" ng-click="auth.$login('github')">Login</a>
+			<span ng-show="auth.user">
+				{{auth.user.name}} | <a href="#" ng-click="auth.$logout()">Logout</a>
+			</span>
+		</span>
+	</div>
+</div>
+
+<div ui-view></div>

@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+			<h1>{{topic.title}} <small>{{topic.timestamp | date:'medium'}}</small></h1>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-body" >
+			<!-- <p class="lead">{{topic.subtitle}}</p> -->
+			<div ng-bind-html="topic.content"></div>
+		</div>
+		<ul class="list-group">
+			<li ng-repeat="link in topic.links" class="list-group-item result__link" ng-click="navigateTo(link.href)">
+				<img ng-src="{{link.icon}}" class="result__link__icon"/>
+				{{link.href}}
+			</li>
+		</ul>
+	</div>
+</div>

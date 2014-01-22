@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+			<h1 editable-text="topic.title">{{topic.title || 'Topic Title'}} <small>{{topic.timestamp | date:'medium'}}</h1>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-body" >
+			<p class="lead">{{topic.subtitle}}</p>
+			<pre editable-textarea="topic.content" ng-bind-html="topic.content" e-rows="20" e-cols="160">{{topic.content}}</pre>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="input-group search-bar">
+					<input type="text" ng-model="addedlink.href" class="form-control input-lg">
+					<span class="input-group-btn">
+						<button class="btn btn-success input-lg" ng-click="addLink()">Add link</button>
+					</span>
+		        </div>
+					
+			</div>
+		</div>
+				
+		<ul class="list-group">
+			<li ng-repeat="link in topic.links" class="list-group-item result__link" ng-click="navigateTo(link.href)">
+				<img ng-src="{{link.icon}}" class="result__link__icon"/>
+				{{link.href}}
+			</li>
+		</ul>
+	</div>
+</div>
+<button class="btn btn-primary" ng-click="saveTopic()">Save</button>
