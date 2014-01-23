@@ -127,6 +127,8 @@
 				//Topics.$save();
 			}
 
+
+			/// disgusting way to do this, TODO: rewrite mechanism to use data from the db and set the icon dynamically
 			function figureIcon() {
 				var _icon;
 				if ($scope.addedlink.href.indexOf('stackoverflow.com') > -1) {
